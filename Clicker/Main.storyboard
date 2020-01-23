@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="94e-As-Wbz">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="ygi-BC-Fjk">
+            <objects>
+                <viewController id="94e-As-Wbz" customClass="MainViewController" customModule="Clicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q5H-Wz-uOm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0V-fl-ju3">
+                                <rect key="frame" x="166" y="160" width="43.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="UXb-Tw-pHo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clicks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvU-9d-AEY">
+                                <rect key="frame" x="161" y="240" width="53" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WeT-De-xlV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3x-ok-x38">
+                                <rect key="frame" x="137.5" y="408" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2LX-Go-cYA"/>
+                                    <constraint firstAttribute="height" constant="100" id="UAw-os-usl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Click"/>
+                                <connections>
+                                    <action selector="clickButtonTapWithSender:" destination="94e-As-Wbz" eventType="touchUpInside" id="QdL-TT-xd0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="L0V-fl-ju3" firstAttribute="top" secondItem="OSz-ku-hem" secondAttribute="top" constant="160" id="8qx-zA-qbE"/>
+                            <constraint firstItem="L0V-fl-ju3" firstAttribute="centerX" secondItem="q5H-Wz-uOm" secondAttribute="centerX" id="GcD-JC-7Z2"/>
+                            <constraint firstItem="H3x-ok-x38" firstAttribute="centerX" secondItem="HvU-9d-AEY" secondAttribute="centerX" id="TQX-9L-fLw"/>
+                            <constraint firstItem="HvU-9d-AEY" firstAttribute="centerX" secondItem="L0V-fl-ju3" secondAttribute="centerX" id="fTf-n6-9A9"/>
+                            <constraint firstItem="H3x-ok-x38" firstAttribute="top" secondItem="HvU-9d-AEY" secondAttribute="bottom" constant="147" id="gcE-xr-gbT"/>
+                            <constraint firstItem="HvU-9d-AEY" firstAttribute="top" secondItem="L0V-fl-ju3" secondAttribute="bottom" constant="56" id="m7a-Q6-C1D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OSz-ku-hem"/>
+                    </view>
+                    <connections>
+                        <outlet property="clickButton" destination="H3x-ok-x38" id="ZNB-9x-86L"/>
+                        <outlet property="clickLabel" destination="HvU-9d-AEY" id="2c4-th-xY8"/>
+                        <outlet property="timerLabel" destination="L0V-fl-ju3" id="tQh-oj-V5d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FS7-1G-MzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="70"/>
+        </scene>
+    </scenes>
+</document>
